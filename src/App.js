@@ -13,6 +13,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
