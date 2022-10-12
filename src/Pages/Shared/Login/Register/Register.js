@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
     const emailRef = useRef('');
@@ -25,24 +25,24 @@ const Register = () => {
       <h2 className="text-primary text-center">Login Here,</h2>
 
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control ref={emailRef} type="email" placeholder="Enter email" />
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <Form.Label>Your Name</Form.Label>
+          <Form.Control ref={emailRef} type="name" placeholder="Enter Name" />
           <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
+            First and Last Name
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email</Form.Label>
           <Form.Control
             ref={passwordRef}
-            type="password"
-            placeholder="Password"
+            type="email"
+            placeholder="Email"
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label>Password</Form.Label>
           <Form.Control
             ref={passwordRef}
             type="password"
